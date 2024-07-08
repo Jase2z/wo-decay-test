@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://drive.google.com/file/d/1-55kG4RHTLayER9azJpS63WLlhSLbwyE/view?usp=sharing",
+  "title": "Decay Group",
+  "description": "A collection of 49 same items stored in a specific way.",
+  "type": "object",
+  "properties": {
+    "group_id": {
+      "description": "A unique identifier for a group.",
+      "type": "string",
+      "uniqueItems": true
+    },
+    "group_start":{
+      "type": "object",
+      "properties": {
+        "screen_capture": {
+          "description": "creation date first screen capture's name.",
+          "type": "string"
+        },
+        "date": {
+          "description": "YYYY-MM-DDTHH:MM:SSZ.  Record date-time in UTC. set seconds to 00",
+          "type": "string", "format": "date-time"
+        }
+      }
+    },
+    "group_item":{
+      "description": "The item used for the group.",
+      "type": "string"
+    },
+    "group_environment":{
+      "description": "A description of the group's environment. ie: in gold sauce pan in cedar bucket in lrg cedar cart on ground",
+      "type": "string"
+   },
+   "group_end":{
+    "description": "The first observed occurrence where the whole group is fully decayed.",
+    "type": "string", "format": "date-time"
+   } 
+  }
+}
